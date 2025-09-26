@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Worker Bitácora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bitácora de Service Worker</h1>
+            <p class="subtitle">Monitoreo en tiempo real del ciclo de vida del Service Worker</p>
+        </header>
+        
+        <div class="dashboard">
+            <div class="status-card">
+                <h2>Estado del Service Worker</h2>
+                <p>
+                    <span id="status-indicator" class="status-indicator"></span>
+                    <span id="status-text">Desconocido</span>
+                </p>
+                <div class="controls">
+                    <button id="clear-logs">Limpiar Bitácora</button>
+                    <button id="toggle-idle">Alternar Log Ocioso</button>
+                </div>
+            </div>
+            
+            <div class="status-card">
+                <h2>Información de la Aplicación</h2>
+                <p><strong>Cache:</strong> <span id="cache-name">SWisrael v1.0</span></p>
+                <p><strong>Entradas en bitácora:</strong> <span id="log-count">0</span></p>
+                <p><strong>Última actualización:</strong> <span id="last-update">--:--:--</span></p>
+            </div>
+        </div>
+        
+        <div class="log-container">
+            <div class="log-header">
+                <h2>Registro de Eventos</h2>
+                <span class="log-count" id="event-count">0 eventos</span>
+            </div>
+            <ul id="log-list">
+                <!-- Las entradas de la bitácora se insertarán aquí -->
+            </ul>
+        </div>
+        
+        <footer>
+            <p>Aplicación de prueba para Service Worker | Desarrollado con JavaScript</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
