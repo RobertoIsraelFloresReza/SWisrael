@@ -118,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Verificar si el navegador soporta Service Workers
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            navigator.serviceWorker.register('./sw.js', { scope: '/SWisrael/' })
+            navigator.serviceWorker.register('./sw.js', { scope: '/' })
                 .then(registration => {
                     console.log('Service Worker registrado con éxito:', registration);
                     addLogEntry('Registrado', 'registered');
